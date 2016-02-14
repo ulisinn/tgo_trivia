@@ -1,5 +1,20 @@
+@import 'unit_font.scss';
+
+$unit_bold: 'UnitOT-Bold';
+$unit_bold_italic: 'UnitOT-BoldIta';
+$unit_light: 'UnitOT-Light';
+$unit_light_italic: 'UnitOT-LightIta';
+$unit_thin: 'UnitOT-Thin';
+$unit_thin_italic: 'UnitOT-ThinIta';
+
 $bg_green: #71bf44;
+$answerBlue: #0482bd;
+$answerPurple: #573393;
+$answerOrange: #f58220;
+$answerYellow: #ffc20e;
 
 body {
   background-color: $bg_green;
+  font-family: $unit_bold;
+  color: white;
 }
