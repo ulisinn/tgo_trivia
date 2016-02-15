@@ -111,7 +111,7 @@ class QuizStore {
                     'Rescuing a beached whale'
                 ],
                 correctIndex: [0],
-                correctCopy: 'Leading an after-school program AND initiating a connection to natural gas'
+                correctCopy: 'Leading an after-school program AND initiating a connection to natural gas for an entire region'
             }
         ];
         const currentIndex = -1;

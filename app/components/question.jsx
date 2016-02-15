@@ -4,6 +4,7 @@ import BackgroundImage from "./background_image.jsx";
 import QuestionHeader from "./question_header.jsx";
 import MultipleChoice from "./multiple_choice.jsx";
 import NextQuestionButton from "./next_question_btn.jsx";
+import AnswerPanel from "./answer_panel.jsx";
 
 var _allImages = [],
     _bgImage;
@@ -53,7 +54,7 @@ export default class QuestionScreen extends React.Component {
                 currentScreen = this.renderInitialScreen();
                 break;
             case 0:
-                currentScreen = this.renderInitialScreen();
+                currentScreen = this.renderIncorrectScreen();
                 break;
             case 1:
                 currentScreen = this.renderCorrectScreen();
@@ -84,6 +85,8 @@ export default class QuestionScreen extends React.Component {
     }
 
     renderCorrectScreen() {
+        const topOffset = (this.props.currentQuestion.title === 'Question 6') ? '40%' : '58%';
+        const nextButtonLabel = (this.props.currentQuestion.title != 'Question 8') ? 'Next > ' : 'Play Again > ';
         return (
             <div className="questionScreen">
                 <BackgroundImage index={this.props.currentIndex}
@@ -96,13 +99,35 @@ export default class QuestionScreen extends React.Component {
                                 prefix={this.props.currentQuestion.listPrefix}
                                 answers={this.props.currentQuestion.answer}
                 ></MultipleChoice>
-                <NextQuestionButton onShowNextQuestion={() => this.onShowNextQuestion()}></NextQuestionButton>
+                <NextQuestionButton label={nextButtonLabel}
+                                    onShowNextQuestion={() => this.onShowNextQuestion()}></NextQuestionButton>
+                <AnswerPanel top={topOffset} header="Answer"
+                             body={this.props.currentQuestion.correctCopy}></AnswerPanel>
             </div>
         )
     }
 
     renderIncorrectScreen() {
+        return (
+            <div className="questionScreen">
+                <BackgroundImage index={this.props.currentIndex}
+                                 imgSrc={this._allImages[this.props.currentIndex]}>
+                </BackgroundImage>
+                <div className="questionChrome">
+                    <h1>TGO</h1>
+                    <h2>Trivia</h2></div>
+                <QuestionHeader index={this.props.currentIndex}
+                                title={this.props.currentQuestion.title}
+                                question={this.props.currentQuestion.question}></QuestionHeader>
+                <MultipleChoice correct={this.props.currentQuestion.correctIndex}
+                                prefix={this.props.currentQuestion.listPrefix}
+                                answers={this.props.currentQuestion.answer}
+                                onQuestionAnswered={(n) => this.onQuestionAnswered(n)}
+                ></MultipleChoice>
+                <AnswerPanel header="Please try again!" body=""></AnswerPanel>
 
+            </div>
+        )
     }
 
 }

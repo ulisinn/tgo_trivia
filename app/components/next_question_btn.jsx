@@ -12,7 +12,7 @@ export default class NextQuestionButton extends React.Component {
     }
 
     render() {
-        return <div className="nextQuestionBtn" onClick={() => this.onClick()}>Next > </div>
+        return <div className="nextQuestionBtn" onClick={() => this.onClick()}>{this.props.label}</div>
     }
 
 }

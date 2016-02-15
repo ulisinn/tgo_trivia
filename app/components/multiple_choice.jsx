@@ -40,7 +40,7 @@ export default class MultipleChoice extends React.Component {
     renderFlexContainer(item) {
         var clr = this._bgColor[arguments[1] % this._bgColor.length];
         var prefix = this.props.prefix[arguments[1]];
-        console.log(arguments[1] % this._bgColor.length, 'renderFlexContainer', arguments);
+        // console.log(arguments[1] % this._bgColor.length, 'renderFlexContainer', arguments);
         return <div style={{backgroundColor:clr}} key={arguments[1]} className="question-flex-item"
                     onClick={()=>this.onClick(arguments[1])}>
             <div className="answerTextContent">
