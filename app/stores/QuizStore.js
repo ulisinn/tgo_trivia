@@ -8,10 +8,11 @@ class QuizStore {
             {
                 title: 'Question 1',
                 question: 'In which pair of the following athletic endeavors do TGO employees participate?',
+                listPrefix: ['a.', 'b.', 'c.', 'd.'],
                 answer: [
                     'MMA (Mixed Martial Arts) fighting and golf',
                     'Scuba diving and polka dancing',
-                    'Bowling and professionalhula hooping',
+                    'Bowling and professional hula hooping',
                     'Marathon running and fencing'
                 ],
                 correctIndex: [0],
@@ -20,6 +21,7 @@ class QuizStore {
             {
                 title: 'Question 2',
                 question: 'How many languages do TGO employees speak worldwide?',
+                listPrefix: ['a.', 'b.', 'c.', 'd.'],
                 answer: [
                     '29',
                     '40',
@@ -32,6 +34,7 @@ class QuizStore {
             {
                 title: 'Question 3',
                 question: 'Which TGO site has the largest percentage of employees with 10-20 years of service?',
+                listPrefix: ['a.', 'b.', 'c.', 'd.'],
                 answer: [
                     'Maipu,Chile',
                     'TAPI,Hungary',
@@ -44,6 +47,7 @@ class QuizStore {
             {
                 title: 'Question 4',
                 question: 'In which of the following are your TGO colleagues currently involved?',
+                listPrefix: ['a.', 'b.', 'c.', 'd.', 'e.', 'f.'],
                 answer: [
                     'Food drives',
                     'Blood donations',
@@ -58,6 +62,7 @@ class QuizStore {
             {
                 title: 'Question 5',
                 question: 'In which of these countries do 3% or more of TGO employees have Master’s degrees?',
+                listPrefix: ['a.', 'b.', 'c.', 'd.', 'e.', 'f.', 'g.'],
                 answer: [
                     'Mexico',
                     'Israel',
@@ -73,6 +78,7 @@ class QuizStore {
             {
                 title: 'Question 6',
                 question: 'Which of these statements is true?',
+                listPrefix: ['a.', 'b.', 'c.'],
                 answer: [
                     'TGO has more employees with more than 20 years of service than less than 5 years',
                     'TGO has more employees with 5 to  10 years of service than between 10 and 20 years',
@@ -84,6 +90,7 @@ class QuizStore {
             {
                 title: 'Question 7',
                 question: 'Which of the following roles has been filled by a TGO colleague?',
+                listPrefix: ['a.', 'b.', 'c.', 'd.'],
                 answer: [
                     'Park Commissioner',
                     'Junior Olympics Swimmer',
@@ -96,6 +103,7 @@ class QuizStore {
             {
                 title: 'Question 8',
                 question: 'Which of the following activities that TGO employees are involved with models Teva’s value of Getting It Done Together?',
+                listPrefix: ['a.', 'b.', 'c.', 'd.'],
                 answer: [
                     'Leading an after-school program for disadvantaged elementary school girls',
                     'Setting a world record for building the largest cake',

@@ -2,6 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import BackgroundImage from "./background_image.jsx";
 import QuestionHeader from "./question_header.jsx";
+import MultipleChoice from "./multiple_choice.jsx";
 
 var _allImages = [],
     _bgImage;
@@ -23,7 +24,7 @@ export default class QuestionScreen extends React.Component {
 
     }
 
-    onButtonClick() {
+    onQuestionAnswered() {
         this.props.onQuestionAnswered();
     }
 
@@ -40,14 +41,11 @@ export default class QuestionScreen extends React.Component {
                 <QuestionHeader index={this.props.currentIndex}
                                 title={this.props.currentQuestion.title}
                                 question={this.props.currentQuestion.question}></QuestionHeader>
-                <div className="question-flex-container">
-                    <div style={{backgroundColor:'#0482bd'}} className="flex-item"></div>
-                    <div style={{backgroundColor:'#573393'}} className="flex-item"></div>
-                    <div style={{backgroundColor:'#f58220'}} className="flex-item"></div>
-                    <div onClick={()=>this.onButtonClick()} style={{backgroundColor:'#ffc20e'}}
-                         className="flex-item">play >
-                    </div>
-                </div>
+                <MultipleChoice correct={this.props.currentQuestion.correctIndex}
+                                prefix={this.props.currentQuestion.listPrefix}
+                                answers={this.props.currentQuestion.answer}
+                                onQuestionAnswered={() => this.onQuestionAnswered()}
+                ></MultipleChoice>
             </div>
         )
     }
