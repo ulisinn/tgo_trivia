@@ -1,3 +1,11 @@
+
+$unit_bold: 'UnitOT-Bold';
+$unit_bold_italic: 'UnitOT-BoldIta';
+$unit_light: 'UnitOT-Light';
+$unit_light_italic: 'UnitOT-LightIta';
+$unit_thin: 'UnitOT-Thin';
+$unit_thin_italic: 'UnitOT-ThinIta';
+
 @font-face {
   font-family: 'UnitOT-Bold';
   src: url('../fonts/UnitOT-Bold_gdi.eot');
@@ -13,15 +21,12 @@
 
 @font-face {
   font-family: 'UnitOT-BoldIta';
-  src: url('../fonts/UnitOT-BoldIta_gdi.eot');
-  src: url('../fonts/UnitOT-BoldIta_gdi.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/UnitOT-BoldIta_gdi.woff') format('woff'),
-  url('../fonts/UnitOT-BoldIta_gdi.ttf') format('truetype'),
-  url('../fonts/UnitOT-BoldIta_gdi.svg#UnitOT-BoldIta') format('svg');
-  font-weight: 700;
+  src: url('../fonts/UnitOT-BoldIta.eot');
+  src: url('../fonts/UnitOT-BoldIta.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/UnitOT-BoldIta.woff') format('woff'),
+  url('../fonts/UnitOT-BoldIta.ttf') format('truetype');
+  font-weight: bold;
   font-style: italic;
-  font-stretch: normal;
-  unicode-range: U+0020-25CA;
 }
 
 @font-face {
