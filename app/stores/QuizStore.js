@@ -43,7 +43,7 @@ class QuizStore {
             },
             {
                 title: 'Question 4',
-                question: 'In which of the following are TGO colleagues currently involved?',
+                question: 'In which of the following are your TGO colleagues currently involved?',
                 answer: [
                     'Food drives',
                     'Blood donations',
