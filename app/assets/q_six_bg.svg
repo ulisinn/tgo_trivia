@@ -1,5 +1,10 @@
 <svg version="1.1" id="q_six_bg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
      viewBox="0 0 362 467.5">
+    <style type="text/css">
+        .st0 {
+            fill: #FFFFFF;
+        }
+    </style>
     <g>
         <path class="st0" d="M146.3,34.7h151.5c6.6,0,12-5.4,12-12v-0.2c0-6.6-5.4-12-12-12H146.3c-6.6,0-12,5.4-12,12v0.2
 		C134.2,29.3,139.6,34.7,146.3,34.7L146.3,34.7z M146.3,34.7"/>
