@@ -1,3 +1,4 @@
+@import '../../node_modules/resetcss/reset.min.css';
 @import 'unit_font.scss';
 
 $unit_bold: 'UnitOT-Bold';
@@ -17,4 +18,163 @@ body {
   background-color: $bg_green;
   font-family: $unit_bold;
   color: white;
+}
+
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.st0 {
+  fill: white;
+}
+
+.svgImage {
+  opacity: 0.25;
+}
+
+.question-flex-container {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 30%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+
+  font-family: $unit_bold_italic;
+  line-height: 1.5em;
+}
+
+.flex-container {
+  position: absolute;
+  width: 380px;
+  right: 2em;
+  top: 2.5%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+
+  font-family: $unit_bold_italic;
+  line-height: 1.5em;
+}
+
+.flex-item {
+  background: tomato;
+  margin: 5px;
+  width: 180px;
+  height: 180px;
+  //margin-top: 10px;
+
+  line-height: 180px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+.splashImage {
+  width: 103%;
+  margin-top: 2em;
+}
+
+.splashContent {
+  position: relative;
+  padding-left: 2em;
+  h1 {
+    font-family: $unit_bold;
+    font-size: 11em;
+    line-height: 1em;
+  }
+  h2 {
+    font-family: $unit_thin;
+    font-size: 11.5em;
+    line-height: 0.7em;
+    text-transform: uppercase;
+  }
+
+}
+
+.splashBottom {
+  position: absolute;
+  top: 50%;
+  height: 50%;
+  p {
+    position: relative;
+    width: 55%;
+    padding-left: 0.83em;
+    font-size: 4em;
+    line-height: 1.2em;
+
+  }
+}
+
+.questionChrome {
+  position: absolute;
+  right: 0;
+  top: 2em;
+  text-align: right;
+  margin-right: 3.5em;
+  h1 {
+    font-family: $unit_bold;
+    font-size: 4em;
+    line-height: 0.7em;
+    padding: 10px;
+  }
+  h2 {
+    font-family: $unit_thin;
+    font-size: 5.5em;
+    line-height: 0.7em;
+    text-transform: uppercase;
+  }
+}
+
+.questionHeader {
+  position: relative;
+  padding-left: 2em;
+  width: 48%;
+  h1 {
+    margin-top: 1.6em;
+    font-family: $unit_bold_italic;
+    font-size: 4.2em;
+    letter-spacing: 0.04em;
+    line-height: 1em;
+  }
+  h2 {
+    margin-top: 1.1em;
+    font-family: $unit_bold;
+    font-size: 2.7em;
+    line-height: 1.3em;
+    letter-spacing: 0.04em;
+
+  }
 }
