@@ -72,7 +72,7 @@ class QuizStore {
                     'Forest, USA',
                     'Munro, Argentina'
                 ],
-                correctIndex: [],
+                correctIndex: [0, 1, 2, 3, 4, 5, 6, 7],
                 correctCopy: 'All of the above'
             },
             {
@@ -97,7 +97,7 @@ class QuizStore {
                     'Civil War Reenactor',
                     'All of the above'
                 ],
-                correctIndex: [],
+                correctIndex: [0, 1, 2, 3],
                 correctCopy: 'All of the above'
             },
             {

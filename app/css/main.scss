@@ -276,3 +276,18 @@ body {
   }
 
 }
+.nextQuestionBtn{
+  position: relative;
+  text-align: center;
+  width:140px;
+  font-family: $unit_bold_italic;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+  font-size: 3em;
+  margin-left: 1em;
+  margin-top: 13%;
+  padding:2px;
+  padding-bottom: 4px;
+  border: 1px solid black;
+}

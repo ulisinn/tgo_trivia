@@ -20,8 +20,11 @@ export default class MultipleChoice extends React.Component {
     }
 
     onClick(index) {
-        console.log("onClick", index);
-        this.props.onQuestionAnswered(index);
+        try {
+            this.props.onQuestionAnswered(index);
+        } catch (e) {
+            //
+        }
     }
 
     render() {
