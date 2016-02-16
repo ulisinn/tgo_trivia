@@ -49,7 +49,8 @@ const common = {
 
     plugins: [
         new HtmlwebpackPlugin({
-            template: 'node_modules/html-webpack-template/index.html',
+            // template: 'node_modules/html-webpack-template/index.html',
+            template: 'app/assets/index.html',
             title: 'Teva Trivia Game',
             mobile: true,
             appMountId: 'app'
