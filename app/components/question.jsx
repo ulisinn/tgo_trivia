@@ -1,4 +1,5 @@
 import React from "react";
+import QuizActions from "../actions/QuizActions";
 import classnames from "classnames";
 import BackgroundImage from "./background_image.jsx";
 import QuestionHeader from "./question_header.jsx";
@@ -28,14 +29,15 @@ export default class QuestionScreen extends React.Component {
 
     }
 
+    componentDidMount() {
+        QuizActions.startTimeout();
+    }
+
     onQuestionAnswered(index) {
         let displayAnswer = 1;
-/*        if (this.props.currentQuestion.correctIndex.indexOf(index) !== -1) {
-            displayAnswer = 1
-        }*/
         this.setState({displayAnswer});
         console.log("onQuestionAnswered", displayAnswer);
-        // this.props.onQuestionAnswered();
+        QuizActions.startTimeout();
     }
 
     onShowNextQuestion() {
@@ -43,7 +45,7 @@ export default class QuestionScreen extends React.Component {
         console.log("onShowNextQuestion");
         this.props.onQuestionAnswered();
         this.setState({displayAnswer});
-
+        QuizActions.startTimeout();
     }
 
     render() {
