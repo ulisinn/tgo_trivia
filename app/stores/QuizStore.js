@@ -1,6 +1,8 @@
 import alt from "../libs/alt";
 import QuizActions from "../actions/QuizActions";
 
+var timeOutId;
+
 class QuizStore {
     constructor() {
         this.bindActions(QuizActions);
@@ -126,6 +128,25 @@ class QuizStore {
         const currentQuestion = this.state.questionnaire[currentIndex];
         this.setState({currentIndex});
         this.setState({currentQuestion});
+    }
+
+    startTimeout() {
+        console.log("startTimeout");
+        if (this.timeOutId) {
+            clearTimeout(this.timeOutId);
+        }
+        this.timeOutId = setTimeout(function () {
+            this.onTimeout();
+        }.bind(this), 15000);
+    }
+
+    killTimeout() {
+        //
+    }
+
+    onTimeout() {
+        console.log("onTimeout");
+        this.resetQuiz();
     }
 
     resetQuiz() {
