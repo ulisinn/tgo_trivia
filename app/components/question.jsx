@@ -29,10 +29,10 @@ export default class QuestionScreen extends React.Component {
     }
 
     onQuestionAnswered(index) {
-        let displayAnswer = 0;
-        if (this.props.currentQuestion.correctIndex.indexOf(index) !== -1) {
+        let displayAnswer = 1;
+/*        if (this.props.currentQuestion.correctIndex.indexOf(index) !== -1) {
             displayAnswer = 1
-        }
+        }*/
         this.setState({displayAnswer});
         console.log("onQuestionAnswered", displayAnswer);
         // this.props.onQuestionAnswered();
@@ -85,7 +85,7 @@ export default class QuestionScreen extends React.Component {
     }
 
     renderCorrectScreen() {
-        const topOffset = (this.props.currentQuestion.title === 'Question 6') ? '40%' : '58%';
+        const topOffset = (this.props.currentQuestion.title === 'Question 6') ? '37%' : '58%';
         const nextButtonLabel = (this.props.currentQuestion.title != 'Question 8') ? 'Next > ' : 'Play Again > ';
         return (
             <div className="questionScreen">
@@ -99,10 +99,15 @@ export default class QuestionScreen extends React.Component {
                                 prefix={this.props.currentQuestion.listPrefix}
                                 answers={this.props.currentQuestion.answer}
                 ></MultipleChoice>
-                <NextQuestionButton label={nextButtonLabel}
-                                    onShowNextQuestion={() => this.onShowNextQuestion()}></NextQuestionButton>
                 <AnswerPanel top={topOffset} header="Answer"
                              body={this.props.currentQuestion.correctCopy}></AnswerPanel>
+                <QuestionHeader index={this.props.currentIndex}
+                                title={this.props.currentQuestion.title}
+                                question={this.props.currentQuestion.question}>
+
+                </QuestionHeader>
+                <NextQuestionButton label={nextButtonLabel}
+                                    onShowNextQuestion={() => this.onShowNextQuestion()}></NextQuestionButton>
             </div>
         )
     }
