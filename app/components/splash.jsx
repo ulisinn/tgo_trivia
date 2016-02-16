@@ -24,17 +24,15 @@ export default class SplashScreen extends React.Component {
         TweenMax.to(this._h1, 0.4, {autoAlpha: 1, x: 0});
         TweenMax.to(this._h2, 0.4, {autoAlpha: 1, x: 0, delay: 0.2});
         TweenMax.to(this._splashBottom, 0.4, {autoAlpha: 1, delay: 0.2});
+
     }
 
     onButtonClick() {
-        var onOutComplete = this.props.onStartQuiz;
-        TweenMax.to(this._h1, 0.4, {
-            autoAlpha: 0, x: 0, delay: 0.2, onComplete: function () {
-                onOutComplete();
-            }
-        });
-        TweenMax.to(this._h2, 0.4, {autoAlpha: 0, x: 0, delay: 0.2});
-        TweenMax.to(this._splashBottom, 0.4, {autoAlpha: 0});
+        this.onOutComplete();
+    }
+
+    onOutComplete() {
+        this.props.onStartQuiz();
     }
 
     render() {
