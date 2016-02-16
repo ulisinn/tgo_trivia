@@ -110,7 +110,7 @@ class QuizStore {
                     'Initiating a connection to natural gas for an entire region',
                     'Rescuing a beached whale'
                 ],
-                correctIndex: [0],
+                correctIndex: [0, 2],
                 correctCopy: 'Leading an after-school program AND initiating a connection to natural gas for an entire region'
             }
         ];
