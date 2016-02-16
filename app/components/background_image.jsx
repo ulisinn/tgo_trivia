@@ -28,58 +28,44 @@ export default class BackgroundImage extends React.Component {
         var styleObj = obj;
         switch (index) {
             case 0:
-                styleObj.top = '50%';
-                styleObj.width = '41.5%';
+                styleObj.top = '48%';
+                styleObj.width = '39%';
                 styleObj.marginLeft = "2em";
                 break;
             case 1:
                 styleObj.top = '42%';
                 styleObj.width = '49.5%';
                 styleObj.marginLeft = "-1em";
-                styleObj.transformOrigin = '50%';
-                styleObj.transform = 'rotate(-20deg)';
                 break;
             case 2:
-                styleObj.top = '62%';
-                styleObj.width = '49.5%';
+                styleObj.top = '61%';
+                styleObj.width = '46%';
                 styleObj.marginLeft = "1.5em";
-                styleObj.transformOrigin = '50%';
-                styleObj.transform = 'rotate(0)';
                 break;
             case 3:
                 styleObj.top = '50%';
                 styleObj.width = '34%';
                 styleObj.marginLeft = "1.5em";
-                styleObj.transformOrigin = '50%';
-                styleObj.transform = 'rotate(0)';
                 break;
             case 4:
-                styleObj.top = '31%';
-                styleObj.width = '55%';
+                styleObj.top = '32%';
+                styleObj.width = '50%';
                 styleObj.marginLeft = "1.5em";
-                styleObj.transformOrigin = '50%';
-                styleObj.transform = 'rotate(0)';
                 break;
             case 5:
                 styleObj.top = '40%';
-                styleObj.width = '35%';
+                styleObj.width = '31.8%';
                 styleObj.marginLeft = "1.5em";
-                styleObj.transformOrigin = '50%';
-                styleObj.transform = 'rotate(0)';
                 break;
             case 6:
                 styleObj.top = '45%';
-                styleObj.width = '35%';
+                styleObj.width = '32%';
                 styleObj.marginLeft = "1.5em";
-                styleObj.transformOrigin = '50%';
-                styleObj.transform = 'rotate(0)';
                 break;
             case 7:
                 styleObj.top = '60%';
                 styleObj.width = '28%';
                 styleObj.marginLeft = "1.5em";
-                styleObj.transformOrigin = '50%';
-                styleObj.transform = 'rotate(0)';
                 break;
         }
 
